@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RehoBoth Tyre Repair Shop</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07182f;
+    color:white;
+    line-height:1.7;
+}
+
+/*=========================
+NAVIGATION
+==========================*/
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#061326;
+    border-bottom:3px solid #f4b400;
+    z-index:999;
+}
+
+nav .container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#f4b400;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#f4b400;
+}
+
+/*=========================
+SECTIONS
+==========================*/
+
+section{
+    padding:120px 10% 80px;
+}
+
+h2{
+    color:#f4b400;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+p{
+    max-width:900px;
+}
+
+/*=========================
+HOME
+==========================*/
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(7,24,47,.85),
+    rgba(7,24,47,.90)),
+    url('hero.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+
+    font-size:65px;
+    color:#fff;
+}
+
+.hero h1 span{
+    color:#f4b400;
+}
+
+.hero p{
+    margin:30px auto;
+    font-size:20px;
+    max-width:900px;
+}
+
+.btn{
+
+    display:inline-block;
+    padding:15px 35px;
+    background:#f4b400;
+    color:#061326;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+
+    background:#ffd54a;
+}
+
+/*=========================
+CARDS
+==========================*/
+
+.card{
+
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    border-left:5px solid #f4b400;
+    padding:35px;
+    border-radius:12px;
+    margin-top:30px;
+}
+
+/*=========================
+SERVICES
+==========================*/
+
+.services{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.service{
+
+    background:#10284a;
+    padding:35px;
+    border-radius:10px;
+    text-align:center;
+    transition:.3s;
+    border-bottom:4px solid #f4b400;
+}
+
+.service:hover{
+
+    transform:translateY(-8px);
+}
+
+.service h3{
+
+    margin-bottom:15px;
+    color:#f4b400;
+}
+
+/*=========================
+CONTACT
+==========================*/
+
+form{
+
+    display:grid;
+    gap:20px;
+    margin-top:40px;
+}
+
+input,
+select,
+textarea{
+
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#10284a;
+    color:white;
+    font-size:16px;
+}
+
+textarea{
+
+    resize:vertical;
+    min-height:150px;
+}
+
+button{
+
+    padding:16px;
+    background:#f4b400;
+    border:none;
+    color:#061326;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:8px;
+}
+
+button:hover{
+
+    background:#ffd54a;
+}
+
+/*=========================
+FOOTER
+==========================*/
+
+footer{
+
+    text-align:center;
+    padding:30px;
+    background:#061326;
+    border-top:3px solid #f4b400;
+}
+
+@media(max-width:768px){
+
+nav .container{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container">
+
+<div class="logo">
+Reho<span>Both</span>
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact Us</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Reho<span>Both</span><br>Tyre Repair Shop</h1>
+
+<p>
+
+Your trusted local destination for professional tyre repairs, quality new and used tyres, mag wheel refurbishment, and engine spare parts. We are committed to providing reliable service, affordable pricing, and expert workmanship that keeps you safely on the road.
+
+Whether you need a quick puncture repair, replacement tyres, or quality engine components, our experienced team is ready to assist.
+
+</p>
+
+<a href="#contact" class="btn">Request a Quote</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Us</h2>
+
+<div class="card">
+
+<p>
+
+At RehoBoth Tyre Repair Shop, customer satisfaction comes first. We pride ourselves on delivering honest advice, dependable service, and quality automotive solutions at competitive prices.
+
+From everyday motorists to commercial vehicle owners, we provide professional tyre services, wheel refurbishment, and engine parts backed by years of industry knowledge.
+
+Our goal is simple: keep every customer moving safely while building long-term relationships based on trust, quality workmanship, and excellent service.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Tyre Repairs</h3>
+<p>
+Professional puncture repairs and tyre inspections to get you safely back on the road.
+</p>
+</div>
+
+<div class="service">
+<h3>New & Used Tyres</h3>
+<p>
+Affordable quality tyres available for a wide range of vehicles and budgets.
+</p>
+</div>
+
+<div class="service">
+<h3>Mag Wheel Refurbishment</h3>
+<p>
+Restore scratched, damaged or faded alloy wheels to their original appearance.
+</p>
+</div>
+
+<div class="service">
+<h3>Engine Parts & Spares</h3>
+<p>
+Quality engine components and replacement parts for many vehicle makes and models.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="card">
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="text"
+placeholder="Contact Number"
+required>
+
+<select required>
+
+<option value="">Select an Enquiry</option>
+
+<option>Tyres</option>
+<option>Mag Repair</option>
+<option>Engine Parts and Spares</option>
+<option>General</option>
+
+</select>
+
+<textarea
+placeholder="Please enter your enquiry..."></textarea>
+
+<button type="submit">
+Send Enquiry
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 RehoBoth Tyre Repair Shop<br>
+Quality • Performance • Reliability
+
+</footer>
+
+</body>
+</html>
