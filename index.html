@@ -47,6 +47,7 @@ nav .container{
     padding:18px 0;
 }
 
+/*
 .logo{
     font-size:28px;
     font-weight:bold;
@@ -55,6 +56,12 @@ nav .container{
 
 .logo span{
     color:#fff;
+}*/
+
+.logo img{
+    height:70px;
+    width:auto;
+    display:block;
 }
 
 nav ul{
@@ -276,8 +283,13 @@ font-size:45px;
 
 <div class="container">
 
+<!-- Replaced logo 
 <div class="logo">
 Reho<span>Both</span>
+</div> -->
+<div class="logo">
+<img src="images/Logo 1 - Transparent.png"
+     alt="RehoBoth Tyre Repair Shop Logo">
 </div>
 
 <ul>
@@ -385,8 +397,9 @@ Quality engine components and replacement parts for many vehicle makes and model
 
 <div class="card">
 
-<form>
+<form id="contactForm">
 
+    <!--
 <input
 type="text"
 placeholder="Your Name"
@@ -414,7 +427,38 @@ placeholder="Please enter your enquiry..."></textarea>
 <button type="submit">
 Send Enquiry
 </button>
+-->
+<input
+id="name"
+type="text"
+placeholder="Your Name"
+required>
 
+<input
+id="contact"
+type="text"
+placeholder="Contact Number"
+required>
+
+<select id="enquiry" required>
+
+<option value="">Select an Enquiry</option>
+<option>Tyres</option>
+<option>Mag Repair</option>
+<option>Engine Parts and Spares</option>
+<option>General</option>
+
+</select>
+
+<textarea
+id="comment"
+placeholder="Please enter your enquiry..."
+required></textarea>
+
+<button type="submit">
+Send Enquiry
+</button>
+    
 </form>
 
 </div>
@@ -427,6 +471,52 @@ Send Enquiry
 Quality • Performance • Reliability
 
 </footer>
+
+<script>
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const contact =
+        document.getElementById("contact").value;
+
+    const enquiry =
+        document.getElementById("enquiry").value;
+
+    const comment =
+        document.getElementById("comment").value;
+
+    const message =
+`*RehoBoth Web Enquiry*
+
+*Name:*
+${name}
+
+*Contact Number:*
+${contact}
+
+*Enquiry Type:*
+${enquiry}
+
+*Comment:*
+${comment}`;
+
+    const phone = "27798526921";
+
+    const url =
+        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+});
+
+</script>
 
 </body>
 </html>
