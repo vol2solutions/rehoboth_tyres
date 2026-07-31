@@ -47,17 +47,6 @@ nav .container{
     padding:18px 0;
 }
 
-/*
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#f4b400;
-}
-
-.logo span{
-    color:#fff;
-}*/
-
 .logo img{
     height:70px;
     width:auto;
@@ -367,10 +356,6 @@ button{
 
 <div class="container">
 
-<!-- Replaced logo 
-<div class="logo">
-Reho<span>Both</span>
-</div> -->
 <div class="logo">
 <img src="images/Logo 1 - Transparent.png"
      alt="RehoBoth Tyre Repair Shop Logo">
@@ -395,8 +380,6 @@ Reho<span>Both</span>
 
 <div>
 
-<!--<h1>Reho<span>Both</span><br>Tyre Repair Shop</h1>-->
-
 <img
     src="images/Logo 1 - Transparent.png"
     alt="RehoBoth Tyre Repair Shop"
@@ -409,8 +392,6 @@ Your trusted local destination for professional tyre repairs, quality new and us
 Whether you need a quick puncture repair, replacement tyres, or quality engine components, our experienced team is ready to assist.
 
 </p>
-
-<!--<a href="#contact" class="btn">Request a Quote</a>-->
 
 </div>
 
@@ -507,7 +488,7 @@ Quality engine components and replacement parts for many vehicle makes and model
                 required>
 
             <input
-                id="contact"
+                id="contactNumber"
                 type="text"
                 placeholder="Contact Number"
                 required>
@@ -560,7 +541,7 @@ document
         document.getElementById("name").value;
 
     const contact =
-        document.getElementById("contact").value;
+        document.getElementById("contactNumber").value;
 
     const enquiry =
         document.getElementById("enquiry").value;
@@ -575,7 +556,7 @@ document
 ${name}
 
 *Contact Number:*
-${contact}
+${contactNumber}
 
 *Enquiry Type:*
 ${enquiry}
